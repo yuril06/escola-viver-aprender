@@ -36,9 +36,13 @@
   if (!planner) return;
 
   const OPEN = 6.5;
-  const CLOSE = 19;
+  const CLOSE = 18.8; // 18h48
+  const SEMI_HOURS = 8;
   const out = (name) => planner.querySelector(`[data-out="${name}"]`);
   const tabs = [...planner.querySelectorAll('.tab')];
+  const rangeBox = planner.querySelector('[data-range]');
+  const range = rangeBox && rangeBox.querySelector('input');
+  let current = null;
 
   const fmt = (h) => {
     const hh = Math.floor(h);
@@ -47,9 +51,13 @@
   };
 
   const select = (tab, focus = false) => {
-    const start = Number(tab.dataset.start);
-    const end = Number(tab.dataset.end);
+    current = tab;
+    const semi = tab.hasAttribute('data-semi') && range;
+    if (rangeBox) rangeBox.hidden = !semi;
+    const start = semi ? Number(range.value) : Number(tab.dataset.start);
+    const end = semi ? start + SEMI_HOURS : Number(tab.dataset.end);
     const name = tab.dataset.name;
+    if (semi) out('start').textContent = `${fmt(start)} (saída às ${fmt(end)})`;
 
     tabs.forEach((t) => {
       const on = t === tab;
@@ -80,6 +88,8 @@
     });
   });
 
+  if (range) range.addEventListener('input', () => { if (current) select(current); });
+
   select(tabs.find((t) => t.getAttribute('aria-checked') === 'true') || tabs[0]);
 })();
 
@@ -87,6 +97,7 @@
 (() => {
   const groups = [
     ['.values', '.head > *, .value'],
+    ['.spaces', '.head > *, .shot'],
     ['.school', '.school__photo, .quote-bubble, .school__copy > *'],
     ['.periods', '.head > *, .tab, .planner__card'],
     ['.classes', '.head > *, .class'],
