@@ -101,6 +101,7 @@
     ['.school', '.school__photo, .school__copy > *'],
     ['.periods', '.head > *, .tab, .planner__card'],
     ['.classes', '.head > *, .class'],
+    ['.faq', '.faq__head > *, .qa'],
     ['.enrol', '.enrol__card'],
     ['.contact', '.head > *, .info, .map'],
   ];
