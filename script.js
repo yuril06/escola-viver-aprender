@@ -98,7 +98,7 @@
   const groups = [
     ['.values', '.head > *, .value'],
     ['.spaces', '.head > *, .shot'],
-    ['.school', '.school__photo, .quote-bubble, .school__copy > *'],
+    ['.school', '.school__photo, .school__copy > *'],
     ['.periods', '.head > *, .tab, .planner__card'],
     ['.classes', '.head > *, .class'],
     ['.enrol', '.enrol__card'],

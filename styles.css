@@ -248,18 +248,10 @@ p { text-wrap: pretty; }
 /* A escola */
 .school { background: var(--white); padding-top: 0; }
 .school__grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(40px, 6vw, 88px); align-items: center; }
-.school__media { position: relative; padding-bottom: 44px; }
+.school__media { position: relative; }
 .school__photo { overflow: hidden; border-radius: var(--radius-lg); box-shadow: var(--shadow); background: var(--sky); }
 .school__photo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
 .school__photo figcaption { padding: 14px 22px 16px; background: #fff; font-weight: 700; font-size: 0.9375rem; color: var(--ink-soft); }
-.quote-bubble {
-  position: absolute; right: -10px; bottom: 0; max-width: 300px;
-  padding: 20px 24px; border-radius: 26px 26px 6px 26px;
-  background: var(--teal); color: #fff;
-  font-family: var(--font-display); font-weight: 700; font-size: 1.375rem; line-height: 1.15;
-  box-shadow: var(--shadow-sm); transform: rotate(-2deg);
-}
-.quote-bubble span { display: block; margin-top: 6px; font-family: var(--font-body); font-size: 0.875rem; font-weight: 700; opacity: 0.9; }
 .school__copy { display: grid; gap: 18px; justify-items: start; }
 .school__copy .blocks { margin-bottom: 0; }
 .school__copy .lead { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
@@ -511,8 +503,7 @@ p { text-wrap: pretty; }
   .class__art { aspect-ratio: 16 / 9; }
   .class__art svg { width: 38%; }
 
-  .quote-bubble { position: relative; right: auto; bottom: auto; margin: -36px 12px 0 auto; max-width: 260px; font-size: 1.1875rem; }
-  .school__media { padding-bottom: 0; }
+
 
   .planner__tabs { grid-template-columns: 1fr 1fr; gap: 10px; }
   .tab { padding: 14px 8px; }
