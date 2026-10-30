@@ -143,6 +143,7 @@ p { text-wrap: pretty; }
 .facts__ico { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; color: #fff; }
 .facts__ico--teal { background: var(--teal); }
 .facts__ico--coral { background: var(--coral); }
+.facts__ico--plum { background: var(--plum); }
 
 .hero__art { position: relative; padding: 28px 10px 40px 26px; }
 .photo-frame {
@@ -265,6 +266,7 @@ p { text-wrap: pretty; }
 .school__copy .blocks { margin-bottom: 0; }
 .school__copy .lead { font-size: 1.25rem; font-weight: 700; color: var(--ink); }
 .school__copy p { color: var(--ink-soft); }
+.school__copy .school__since { font-family: "Baloo 2", system-ui, sans-serif; font-weight: 800; font-size: 1.25rem; line-height: 1.3; color: var(--plum); }
 .checks { display: grid; gap: 12px; margin: 6px 0 10px; }
 .checks li { display: flex; gap: 12px; align-items: flex-start; font-weight: 700; }
 .checks svg { flex: none; width: 28px; height: 28px; padding: 4px; border-radius: 50%; background: var(--lime); color: var(--ink); }
