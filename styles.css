@@ -370,8 +370,9 @@ p { text-wrap: pretty; }
 .enrol__lead { font-size: 1.25rem; font-weight: 700; max-width: 36ch; }
 .enrol__actions { display: flex; flex-wrap: wrap; gap: 14px 16px; margin-top: 6px; }
 .enrol__sign { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; }
-.enrol__art { display: grid; place-items: center; }
-.enrol__abc { width: min(320px, 100%); }
+.enrol__art { align-self: end; display: grid; justify-items: center; margin-bottom: calc(-1 * clamp(36px, 5vw, 72px)); }
+.enrol__mascots { width: min(460px, 100%); height: auto; transform-origin: 50% 100%; transition: transform 400ms var(--bounce); }
+.enrol__card:hover .enrol__mascots { transform: translateY(-6px) rotate(-1deg); }
 
 /* Contato */
 .contact { background: var(--sky); }
@@ -510,7 +511,7 @@ p { text-wrap: pretty; }
   .enrol__card { grid-template-columns: 1fr; }
   .faq__grid { grid-template-columns: 1fr; }
   .faq__head { position: static; }
-  .enrol__art { display: none; }
+  .enrol__mascots { width: min(340px, 90%); }
 }
 
 /* ---------- Celular ---------- */
