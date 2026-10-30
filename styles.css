@@ -210,6 +210,15 @@ p { text-wrap: pretty; }
 .value--plum { background: #f8e3ed; }
 .value--plum .value__ico { background: var(--plum); }
 
+/* Espaços: momentos com as crianças */
+.moments { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 18px; }
+.moment { overflow: hidden; border-radius: var(--radius); background: var(--sky); box-shadow: var(--shadow-sm); transition: rotate 300ms var(--bounce), translate 300ms var(--bounce), opacity 700ms var(--ease), transform 800ms var(--ease); }
+.moment:nth-child(odd) { rotate: -1.2deg; }
+.moment:nth-child(even) { rotate: 1.2deg; }
+.moment:hover { rotate: 0deg; translate: 0 -6px; }
+.moment img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.moment:nth-child(3) img { object-position: 50% 30%; }
+
 /* Espaços: galeria */
 .spaces { padding-top: 0; }
 .gallery {
@@ -526,6 +535,7 @@ p { text-wrap: pretty; }
   .ribbon__track { font-size: 1.0625rem; gap: 20px; }
   .head p { font-size: 1.0625rem; }
   .values__grid, .classes__grid { grid-template-columns: 1fr; gap: 16px; }
+  .moments { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 300px auto; grid-template-areas: "park park" "room mural" "list list"; gap: 12px; }
   .shot figcaption { left: 10px; right: 10px; bottom: 10px; font-size: 0.8125rem; padding: 6px 10px; }
   .shot--list { padding: 24px; }

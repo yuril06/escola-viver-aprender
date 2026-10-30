@@ -97,7 +97,7 @@
 (() => {
   const groups = [
     ['.values', '.head > *, .value'],
-    ['.spaces', '.head > *, .shot'],
+    ['.spaces', '.head > *, .moment, .shot'],
     ['.school', '.school__photo, .school__copy > *'],
     ['.periods', '.head > *, .tab, .planner__card'],
     ['.classes', '.head > *, .class'],
