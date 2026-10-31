@@ -223,11 +223,12 @@ p { text-wrap: pretty; }
 .spaces { padding-top: 0; }
 .gallery {
   display: grid; gap: 18px;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 300px 300px auto;
-  grid-template-areas: "park room mural" "class room mural" "list list list";
+  grid-template-areas: "park park room corr" "class class mural corr" "list list list list";
 }
 .shot--class { grid-area: class; }
+.shot--corr { grid-area: corr; }
 .shot--class img { object-position: 50% 60%; }
 .shot { position: relative; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--sky); box-shadow: var(--shadow-sm); }
 .shot--park { grid-area: park; }
@@ -484,7 +485,7 @@ p { text-wrap: pretty; }
 @media (max-width: 1024px) {
   .menu > a:not(.btn) { padding: 10px; }
   .values__grid, .classes__grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery { grid-template-columns: 1.3fr 1fr; grid-template-rows: 260px 260px 260px auto; grid-template-areas: "park park" "room mural" "class mural" "list list"; }
+  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 260px 260px 280px auto; grid-template-areas: "park park" "room corr" "mural corr" "class class" "list list"; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {
@@ -544,7 +545,7 @@ p { text-wrap: pretty; }
   .head p { font-size: 1.0625rem; }
   .values__grid, .classes__grid { grid-template-columns: 1fr; gap: 16px; }
   .moments { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
-  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 300px 220px auto; grid-template-areas: "park park" "room mural" "class class" "list list"; gap: 12px; }
+  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 240px 240px 220px auto; grid-template-areas: "park park" "room corr" "mural corr" "class class" "list list"; gap: 12px; }
   .shot figcaption { left: 10px; right: 10px; bottom: 10px; font-size: 0.8125rem; padding: 6px 10px; }
   .shot--list { padding: 24px; }
   .value { padding: 24px 22px 26px; }
