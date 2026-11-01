@@ -237,7 +237,7 @@ p { text-wrap: pretty; }
 .shot--list { grid-area: list; }
 .shot img { width: 100%; height: 100%; object-fit: cover; transition: transform 700ms var(--ease); }
 .shot--park img { object-position: 50% 60%; }
-.shot--room img { object-position: 50% 70%; }
+.shot--room img { object-position: 50% 40%; }
 .shot:hover img { transform: scale(1.05); }
 .shot figcaption {
   position: absolute; left: 14px; bottom: 14px; right: 14px; width: fit-content;
@@ -320,7 +320,9 @@ p { text-wrap: pretty; }
 .planner__note { font-size: 0.9375rem; color: var(--ink-soft); max-width: 40ch; }
 
 /* Aulas extras */
-.classes__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.classes__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+.classes__grid > .class { grid-column: span 2; }
+.classes__grid > .class:nth-child(4) { grid-column: 2 / span 2; }
 .class { display: grid; align-content: start; gap: 10px; padding: 18px 18px 28px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow-sm); transition: transform 300ms var(--bounce); }
 .class:hover { transform: translateY(-6px); }
 .class:hover .class__art svg { transform: rotate(-6deg) scale(1.06); }
@@ -332,6 +334,7 @@ p { text-wrap: pretty; }
 .class--pink .class__art { background: #fde4ec; }
 .class--yellow .class__art { background: #fff1c2; }
 .class--lime .class__art { background: #ecf5cf; }
+.class--coral .class__art { background: #fde3df; }
 
 /* Perguntas frequentes */
 .faq { padding-top: 0; }
@@ -485,6 +488,8 @@ p { text-wrap: pretty; }
 @media (max-width: 1024px) {
   .menu > a:not(.btn) { padding: 10px; }
   .values__grid, .classes__grid { grid-template-columns: repeat(2, 1fr); }
+  .classes__grid > .class, .classes__grid > .class:nth-child(4) { grid-column: auto; }
+  .classes__grid > .class:last-child { grid-column: 1 / -1; justify-self: center; width: calc(50% - 11px); }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 260px 260px 280px auto; grid-template-areas: "park park" "room corr" "mural corr" "class class" "list list"; }
   .footer__inner { grid-template-columns: 1fr 1fr; }
 }
@@ -544,6 +549,7 @@ p { text-wrap: pretty; }
   .ribbon__track { font-size: 1.0625rem; gap: 20px; }
   .head p { font-size: 1.0625rem; }
   .values__grid, .classes__grid { grid-template-columns: 1fr; gap: 16px; }
+  .classes__grid > .class:last-child { width: auto; justify-self: stretch; }
   .moments { grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 240px 240px 220px auto; grid-template-areas: "park park" "room corr" "mural corr" "class class" "list list"; gap: 12px; }
   .shot figcaption { left: 10px; right: 10px; bottom: 10px; font-size: 0.8125rem; padding: 6px 10px; }
