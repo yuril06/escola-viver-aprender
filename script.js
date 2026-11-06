@@ -36,7 +36,7 @@
   if (!planner) return;
 
   const OPEN = 6.5;
-  const CLOSE = 18.8; // 18h48
+  const CLOSE = 19; // 19h
   const SEMI_HOURS = 8;
   const out = (name) => planner.querySelector(`[data-out="${name}"]`);
   const tabs = [...planner.querySelectorAll('.tab')];
