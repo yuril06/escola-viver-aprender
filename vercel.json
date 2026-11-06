@@ -22,5 +22,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "escola-viver-aprender.vercel.app"
+        }
+      ],
+      "destination": "https://www.escolaviveraprender.com.br/$1",
+      "permanent": true
+    }
   ]
 }
