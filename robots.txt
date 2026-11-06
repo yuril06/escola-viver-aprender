@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://escola-viver-aprender.vercel.app/sitemap.xml
+Sitemap: https://www.escolaviveraprender.com.br/sitemap.xml
